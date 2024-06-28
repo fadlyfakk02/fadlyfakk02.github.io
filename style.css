@@ -1,0 +1,208 @@
+body {
+    font-family: 'Calibri', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Warna gradien bisa disesuaikan sesuai gambar */
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.8); /* Menggunakan transparansi */
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffffff;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: rgba(42, 42, 42, 0.8); /* Menggunakan transparansi */
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.intro-text {
+    max-width: 60%;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3b3b3b;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.intro-image img {
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.intro-image img:hover {
+    transform: scale(1.05);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    padding: 50px;
+    margin: 20px;
+    background: rgba(26, 26, 26, 0.8); /* Menggunakan transparansi */
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.creation-gallery {
+    display: flex;
+    gap: 30px;
+}
+
+.creation-gallery img {
+    max-width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.creation-gallery img:hover {
+    transform: scale(1.2);
+}
+
+/* Styles for Skills Progress Bar */
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    background: #3b3b3b;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    background: #00d4ff;
+    height: 20px;
+    border-radius: 20px;
+    position: relative;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    animation: progressAnim 2s ease-out;
+}
+
+@keyframes progressAnim {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--progress-width);
+    }
+}
+
+.progress span {
+    position: relative;
+    z-index: 2;
+}
+
+
+#contact ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#contact a {
+    text-decoration: none;
+    color: #ffffff;
+    background: #3b3b3b;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact a:hover {
+    background-color: #505050;
+}
